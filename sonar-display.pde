@@ -72,7 +72,6 @@ void draw()
     val = myPort.readStringUntil('\n');  
     if (val != null) {
       pair = split(val, "$");
-      //if(pair.length < 2) {pair={"0","0"}}
       tangle = int(pair[0]);
       tdist = int(map(float(trim(pair[1])), 400, 600, 600, 400));
       pings.add(new Ping(tangle, tdist));
